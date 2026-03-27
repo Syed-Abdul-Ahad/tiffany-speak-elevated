@@ -26,9 +26,14 @@
    gap: 1.5rem;
 }
 
+/* Match Home page container width so header aligns consistently */
+body .container {
+   width: min(1120px, 92%);
+}
+
 .brand-mark {
-   width: 48px;
-   height: 48px;
+   width: 60px;
+   height: 60px;
    border: 1px solid #ede6df;
    border-radius: 2px;
    display: grid;
