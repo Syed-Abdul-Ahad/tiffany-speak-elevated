@@ -32,7 +32,10 @@
   }
 
   var body = document.body;
-  var isAnimatedPage = body.classList.contains("home-page") || body.classList.contains("about-page");
+  var isAnimatedPage =
+    body.classList.contains("home-page") ||
+    body.classList.contains("about-page") ||
+    body.classList.contains("speak-page");
   var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   if (isAnimatedPage && !prefersReducedMotion) {
