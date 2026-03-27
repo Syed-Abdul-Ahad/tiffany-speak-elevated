@@ -30,4 +30,37 @@
       contactForm.reset();
     });
   }
+
+  // Simple, reusable reveal-on-scroll animation.
+  var animatedNodes = document.querySelectorAll("[data-animate]");
+  if (animatedNodes.length) {
+    var reveal = function (el) {
+      var delay = Number(el.getAttribute("data-animate-delay") || "0");
+      if (delay) {
+        el.style.transitionDelay = delay + "ms";
+      }
+      el.classList.add("is-in");
+    };
+
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) {
+              return;
+            }
+            reveal(entry.target);
+            io.unobserve(entry.target);
+          });
+        },
+        { root: null, threshold: 0.12 }
+      );
+
+      animatedNodes.forEach(function (node) {
+        io.observe(node);
+      });
+    } else {
+      animatedNodes.forEach(reveal);
+    }
+  }
 })();
