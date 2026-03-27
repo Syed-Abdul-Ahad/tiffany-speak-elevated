@@ -8,6 +8,164 @@
    --work-hero-accent: #d28a73;
 }
 
+/* ------------------------------
+    Shared header styling (copied from home/styles.css)
+    ------------------------------ */
+
+.home-header {
+   position: sticky;
+   top: 0;
+   z-index: 20;
+   border-bottom: 1px solid #e4dfda;
+   background: rgba(250, 248, 246, 0.96);
+   backdrop-filter: blur(8px);
+}
+
+.home-header-inner {
+   min-height: 78px;
+   gap: 1.5rem;
+}
+
+.brand-mark {
+   width: 48px;
+   height: 48px;
+   border: 1px solid #ede6df;
+   border-radius: 2px;
+   display: grid;
+   place-items: center;
+   color: #c8846f;
+   text-decoration: none;
+   letter-spacing: 0.18em;
+   font-size: 0.8rem;
+}
+
+.home-nav {
+   gap: 1.2rem;
+   align-items: center;
+}
+
+.home-nav a {
+   font-size: 0.74rem;
+   text-transform: uppercase;
+   letter-spacing: 0.18em;
+   color: #8b8178;
+   padding: 0;
+   border-radius: 0;
+   text-decoration: none;
+   background: none;
+}
+
+.home-nav a:hover,
+.home-nav a.active {
+   background: none;
+   color: #3d3430;
+}
+
+.home-nav .book-btn {
+   padding: 0.52rem 0.95rem;
+   border: 1px solid #c8846f;
+   color: #fff;
+   background: #c8846f;
+   border-radius: 2px;
+   transition: 0.25s ease;
+}
+
+.home-nav .book-btn:hover,
+.home-nav .book-btn.active {
+   color: #c8846f;
+   background: transparent;
+}
+
+/* ------------------------------
+   Shared footer styling (copied from home/styles.css)
+   ------------------------------ */
+
+.home-footer {
+   border-top: 1px solid rgba(255, 255, 255, 0.08);
+   background: #2d3139;
+   color: #d4d0d3;
+}
+
+.footer-top {
+   padding: 8rem 0 2.6rem;
+   display: grid;
+   grid-template-columns: 1.3fr 0.9fr 0.95fr;
+   gap: 2.6rem;
+   border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.footer-top h3,
+.footer-top h4 {
+   color: #faf7f6;
+   margin-bottom: 0.7rem;
+   font-size: 1.75rem;
+}
+
+.footer-top h4 {
+   text-transform: uppercase;
+   letter-spacing: 0.1em;
+   font-size: 0.9rem;
+   font-family: "Montserrat", "Segoe UI", sans-serif;
+}
+
+.footer-top p,
+.footer-top a {
+   margin: 0.35rem 0;
+   display: block;
+   color: #b8b5bb;
+   text-decoration: none;
+   font-size: 0.9rem;
+   margin-bottom: 0.5rem;
+}
+
+.footer-top a:hover,
+.footer-link {
+   color: #db9f88;
+}
+
+.footer-bottom {
+   padding: 1.2rem 0 1.65rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 1rem;
+}
+
+.footer-bottom p,
+.footer-bottom a {
+   margin: 0;
+   color: #a7a2a8;
+   font-size: 0.75rem;
+   text-decoration: none;
+}
+
+.footer-bottom div {
+   display: flex;
+   gap: 1rem;
+}
+
+@media (max-width: 980px) {
+   .footer-top {
+      grid-template-columns: 1fr 1fr;
+   }
+}
+
+@media (max-width: 760px) {
+   .footer-top,
+   .footer-bottom {
+      grid-template-columns: 1fr;
+      display: grid;
+   }
+
+   .footer-bottom {
+      text-align: center;
+   }
+
+   .footer-bottom div {
+      justify-content: center;
+   }
+}
+
 /* Let the Work page follow the warm, flat background from the design */
 body {
    background: var(--work-hero-bg);
@@ -88,6 +246,490 @@ body {
 .work-hero__cta:hover {
    filter: brightness(0.96);
    transform: translateY(-1px);
+}
+
+/* ------------------------------
+   The Method / Framework section
+   ------------------------------ */
+
+.work-method {
+   padding: 6.5rem 0 6.8rem;
+   background: #F8F6F2;
+}
+
+.work-method__header {
+   width: min(860px, 100%);
+   margin: 0 auto 3.4rem;
+   text-align: center;
+   display: grid;
+   gap: 1.05rem;
+}
+
+.work-method__eyebrow {
+   margin: 0;
+   text-transform: uppercase;
+   letter-spacing: 0.32em;
+   font-size: 0.72rem;
+   font-weight: 600;
+   color: rgba(210, 138, 115, 0.9);
+}
+
+.work-method__title {
+   margin: 0;
+   font-family: "DM Serif Display", Georgia, "Times New Roman", serif;
+   font-weight: 400;
+   letter-spacing: -0.02em;
+   font-size: clamp(2.1rem, 4.2vw, 2.5rem);
+   color: var(--work-hero-ink);
+}
+
+.work-method__intro {
+   margin: 0;
+   text-align: center;
+   font-size: 0.98rem;
+   line-height: 1.7;
+   color: rgba(31, 35, 44, 0.56);
+   padding: 0rem 7rem;
+}
+
+.work-method__grid {
+   display: grid;
+   grid-template-columns: repeat(3, minmax(0, 1fr));
+   gap: 1.6rem;
+   align-items: stretch;
+   margin: 0 auto;
+}
+
+.method-card {
+   background: rgba(255, 255, 255, 0.72);
+   border: 1px solid #efe7df;
+   border-radius: 10px;
+   padding: 2.2rem 2.1rem 2.35rem;
+   box-shadow: 0 10px 28px rgba(30, 32, 39, 0.06);
+   text-align: center;
+}
+
+.method-card__icon {
+   width: 52px;
+   height: 52px;
+   margin: 0 auto 1.25rem;
+   border-radius: 999px;
+   display: grid;
+   place-items: center;
+   background: rgba(210, 138, 115, 0.08);
+   color: rgba(210, 138, 115, 0.9);
+}
+
+.method-card__title {
+   margin: 0;
+   font-family: "DM Serif Display", Georgia, "Times New Roman", serif;
+   font-weight: 400;
+   font-size: 1.55rem;
+   letter-spacing: -0.01em;
+   color: var(--work-hero-ink);
+}
+
+.method-card__text {
+   margin: 0.9rem auto 0;
+   font-size: 0.92rem;
+   line-height: 1.7;
+   color: rgba(31, 35, 44, 0.56);
+   max-width: 22rem;
+}
+
+.work-method__note {
+   margin: 2.3rem auto 0;
+   text-align: center;
+   font-size: 0.82rem;
+   font-style: italic;
+   color: rgba(31, 35, 44, 0.5);
+}
+
+/* ------------------------------
+   Start With Awareness section
+   ------------------------------ */
+
+.work-assessment {
+   padding: 6.2rem 0 7.2rem;
+   background: #F3EFE9;
+}
+
+.work-assessment__card {
+   width: min(740px, 100%);
+   margin: 0 auto;
+   background: rgba(255, 255, 255, 0.85);
+   border: 1px solid #e8dfd7;
+   border-radius: 4px;
+   padding: 3.4rem 4.1rem 3.6rem;
+   box-shadow: 0 18px 40px rgba(30, 32, 39, 0.08);
+}
+
+.work-assessment__eyebrow {
+   margin: 0;
+   text-transform: uppercase;
+   letter-spacing: 0.28em;
+   font-size: 0.72rem;
+   font-weight: 600;
+   color: rgba(210, 138, 115, 0.9);
+}
+
+.work-assessment__title {
+   margin: 0.9rem 0 0;
+   font-family: "DM Serif Display", Georgia, "Times New Roman", serif;
+   font-weight: 400;
+   letter-spacing: -0.02em;
+   font-size: clamp(2.25rem, 4.2vw, 3.05rem);
+   color: var(--work-hero-ink);
+}
+
+.work-assessment__desc {
+   margin: 1.3rem 0 0;
+   font-size: 0.95rem;
+   line-height: 1.8;
+   color: rgba(31, 35, 44, 0.58);
+}
+
+.work-assessment__list {
+   list-style: none;
+   padding: 0;
+   margin: 1.2rem 0 0;
+   display: grid;
+   gap: 0.75rem;
+   color: rgba(31, 35, 44, 0.6);
+}
+
+.work-assessment__list li {
+   position: relative;
+   padding-left: 1.7rem;
+   font-size: 0.92rem;
+   line-height: 1.6;
+}
+
+.work-assessment__list li::before {
+   content: "\2192";
+   position: absolute;
+   left: 0;
+   top: 0;
+   color: rgba(210, 138, 115, 0.95);
+   font-weight: 600;
+}
+
+.work-assessment__note {
+   margin: 1.6rem 0 0;
+   font-size: 0.82rem;
+   font-style: italic;
+   color: rgba(31, 35, 44, 0.52);
+}
+
+.work-assessment__cta {
+   margin-top: 2.2rem;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 56px;
+   padding: 0.95rem 2.4rem;
+   border-radius: 0.2rem;
+   background: var(--work-hero-accent);
+   color: #fff;
+   text-decoration: none;
+   text-transform: uppercase;
+   letter-spacing: 0.14em;
+   font-weight: 600;
+   font-size: 0.78rem;
+   transition: transform 180ms ease, filter 180ms ease;
+}
+
+.work-assessment__cta:hover {
+   filter: brightness(0.96);
+   transform: translateY(-1px);
+}
+
+/* ------------------------------
+   Shared Work section primitives
+   ------------------------------ */
+
+.work-section__eyebrow {
+   margin: 0;
+   text-transform: uppercase;
+   letter-spacing: 0.28em;
+   font-size: 0.7rem;
+   font-weight: 600;
+   color: rgba(210, 138, 115, 0.9);
+}
+
+.work-section__title {
+   margin: 0.85rem 0 0;
+   font-family: "DM Serif Display", Georgia, "Times New Roman", serif;
+   font-weight: 100 !important;
+   letter-spacing: -0.02em;
+   color: var(--work-hero-ink);
+   font-size: clamp(2.05rem, 4vw, 2.9rem);
+}
+
+.work-section__desc {
+   margin: 1.1rem 0 0;
+   font-size: 0.95rem;
+   line-height: 1.85;
+   color: rgba(31, 35, 44, 0.58);
+}
+
+.work-section__support {
+   margin: 1.05rem auto 0;
+   font-size: 0.92rem;
+   line-height: 1.8;
+   color: rgba(31, 35, 44, 0.54);
+   max-width: 40rem;
+}
+
+.work-btn {
+   margin-top: 2rem;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 54px;
+   padding: 0.95rem 2.2rem;
+   border-radius: 0.2rem;
+   background: var(--work-hero-accent);
+   color: #fff;
+   text-decoration: none;
+   text-transform: uppercase;
+   letter-spacing: 0.14em;
+   font-weight: 600;
+   font-size: 0.78rem;
+   transition: transform 180ms ease, filter 180ms ease;
+}
+
+.work-btn:hover {
+   filter: brightness(0.96);
+   transform: translateY(-1px);
+}
+
+/* ------------------------------
+   Collective section
+   ------------------------------ */
+
+.work-collective {
+   padding: 6.4rem 0 6.8rem;
+   background: #F8F6F2;
+}
+
+.work-collective__grid {
+   display: grid;
+   grid-template-columns: 1.1fr 0.9fr;
+   gap: 2.4rem;
+   align-items: start;
+}
+
+.work-collective__content {
+   max-width: 36rem;
+}
+
+.work-collective__panel {
+   background: #EFECE7;
+   border: 1px solid #efe7df;
+   border-radius: 6px;
+   padding: 2.35rem 2.2rem;
+   box-shadow: 0 12px 30px rgba(30, 32, 39, 0.06);
+}
+
+.work-panel__title {
+   margin: 0;
+   font-family: "DM Serif Display", Georgia, "Times New Roman", serif;
+   font-weight: 100;
+   font-size: 1.6rem;
+   color: var(--work-hero-ink);
+}
+
+.work-panel__list {
+   list-style: none;
+   padding: 0;
+   margin: 1.1rem 0 0;
+   display: grid;
+   gap: 0.8rem;
+}
+
+.work-panel__list li {
+   position: relative;
+   padding-left: 1.55rem;
+   color: rgba(31, 35, 44, 0.58);
+   font-size: 0.92rem;
+   line-height: 1.6;
+}
+
+.work-panel__list li::before {
+   content: "\2022";
+   position: absolute;
+   left: 0;
+   top: 0;
+   color: rgba(210, 138, 115, 0.95);
+   font-size: 1.2rem;
+   line-height: 1;
+}
+
+/* ------------------------------
+   Programs section
+   ------------------------------ */
+
+.work-programs {
+   padding: 6.4rem 0 6.8rem;
+   background: #F3EFE9;
+}
+
+.work-programs__header {
+   text-align: center;
+   margin: 0 auto 2.8rem;
+   width: min(920px, 100%);
+}
+
+.work-programs__card {
+   width: min(760px, 100%);
+   margin: 0 auto;
+   background: rgba(255, 255, 255, 0.86);
+   border: 1px solid #e8dfd7;
+   border-radius: 6px;
+   padding: 2.8rem 3rem 3rem;
+   box-shadow: 0 18px 40px rgba(30, 32, 39, 0.08);
+}
+
+.work-programs__cardTitle {
+   margin: 0;
+   font-family: "DM Serif Display", Georgia, "Times New Roman", serif;
+   font-weight: 400;
+   font-size: 1.55rem;
+   color: var(--work-hero-ink);
+}
+
+.work-programs__meta {
+   margin: 0.4rem 0 0;
+   font-size: 0.78rem;
+   color: rgba(31, 35, 44, 0.48);
+}
+
+.work-programs__desc {
+   margin: 1.25rem 0 0;
+   font-size: 0.92rem;
+   line-height: 1.75;
+   color: rgba(31, 35, 44, 0.58);
+}
+
+.work-programs__list,
+.work-programs__included {
+   margin: 1.1rem 0 0;
+   padding-left: 1.15rem;
+   color: rgba(31, 35, 44, 0.58);
+   display: grid;
+   gap: 0.55rem;
+}
+
+.work-programs__subhead {
+   margin: 1.4rem 0 0;
+   font-weight: 600;
+   font-size: 0.9rem;
+   color: rgba(31, 35, 44, 0.64);
+}
+
+/* ------------------------------
+   Learn at Your Own Pace
+   ------------------------------ */
+
+.work-learn {
+   padding: 6.4rem 0 6.8rem;
+   background: #F8F6F2;
+}
+
+.work-learn__inner {
+   width: min(760px, 100%);
+   margin: 0 auto;
+   text-align: left;
+}
+
+.work-learn__list {
+   margin: 1.2rem 0 0;
+   padding-left: 1.15rem;
+   color: rgba(31, 35, 44, 0.58);
+   display: grid;
+   gap: 0.55rem;
+}
+
+.work-learn__note {
+   margin: 1.3rem 0 0;
+   font-size: 0.92rem;
+   line-height: 1.75;
+   color: rgba(31, 35, 44, 0.56);
+}
+
+/* ------------------------------
+   Not Sure Where to Begin
+   ------------------------------ */
+
+.work-begin {
+   padding: 7rem 0 7.6rem;
+   background: #F3EFE9;
+}
+
+.work-begin__inner {
+   width: min(700px, 100%);
+   margin: 0 auto;
+   text-align: center;
+   display: grid;
+   justify-items: center;
+}
+
+.work-begin__title {
+   margin: 0;
+   font-family: "DM Serif Display", Georgia, "Times New Roman", serif;
+   font-weight: 400;
+   letter-spacing: -0.02em;
+   font-size: clamp(2.1rem, 4vw, 2.9rem);
+   color: var(--work-hero-ink);
+}
+
+.work-begin__desc {
+   margin: 1rem 0 0;
+   font-size: 0.95rem;
+   line-height: 1.8;
+   color: rgba(31, 35, 44, 0.56);
+}
+
+.work-begin__steps {
+   margin-top: 1.3rem;
+   display: grid;
+   gap: 0.4rem;
+   color: gray;
+   font-size: 1rem;
+}
+
+.work-begin__steps p {
+   margin: 0;
+}
+
+@media (max-width: 980px) {
+   .work-collective__grid {
+      grid-template-columns: 1fr;
+   }
+
+   .work-collective__content {
+      max-width: none;
+   }
+}
+
+@media (max-width: 760px) {
+   .work-programs__card {
+      padding: 2.4rem 1.7rem 2.6rem;
+   }
+}
+
+@media (max-width: 760px) {
+   .work-assessment__card {
+      padding: 2.6rem 1.7rem 2.7rem;
+   }
+}
+
+@media (max-width: 980px) {
+   .work-method__grid {
+      grid-template-columns: 1fr;
+      width: min(560px, 100%);
+   }
 }
 
 @media (max-width: 760px) {
