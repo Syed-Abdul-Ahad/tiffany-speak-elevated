@@ -160,6 +160,33 @@ textarea {
   text-align: center;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .reveal-from-bottom {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+    filter: blur(1px);
+    transition: opacity 520ms ease, transform 520ms cubic-bezier(0.2, 0.68, 0.2, 1), filter 520ms ease;
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
+  }
+
+  .reveal-from-bottom.in-view {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-from-bottom,
+  .reveal-from-bottom.in-view {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+}
+
 @media (max-width: 760px) {
   .header-inner {
     flex-direction: column;
