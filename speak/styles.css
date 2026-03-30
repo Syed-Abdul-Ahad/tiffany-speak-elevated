@@ -1,0 +1,358 @@
+/* Speaking page specific styles. Home shell styles come from ../home/styles.css */
+.speak-page {
+  background: #f3f1ee;
+}
+
+.speak-page .container {
+  width: min(1120px, 92%);
+}
+
+.speak-page .home-nav a[href="../speak/index.html"] {
+  color: #d49a84;
+}
+
+.speaking-hero-lite {
+  padding-top: 8rem !important;
+  background: #efece8;
+  border-bottom: 1px solid #e4ddd6;
+  padding: 3.55rem 0 3.05rem;
+}
+
+.speaking-hero-inner {
+  max-width: 980px;
+  margin-left: 6rem;
+}
+
+.speaking-hero-inner .section-label {
+  margin: 0 0 0.62rem;
+  color: #d39a84 !important;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.speaking-hero-inner h1 {
+  margin: 0;
+  font-size: clamp(3.8rem, 6.8vw, 6.5rem);
+  line-height: 0.93;
+  letter-spacing: -0.012em;
+  color: #242a37;
+}
+
+.speaking-subline {
+  width: 70%;
+  margin: 0.6rem 0 0.88rem !important;
+  margin-top: 2rem !important;
+  color: #758090;
+  font-size: 1.25rem !important;
+
+}
+
+.speaking-hero-inner p {
+  color: #748090;
+  font-size: 1rem;
+  line-height: 2;
+  margin: 0 0 0.58rem;
+  width: 70%;
+}
+
+.speaking-hero-inner .text-btn {
+  margin-top: 0.95rem;
+  background: #d2957f;
+  border: 1px solid #d2957f;
+  color: #fff;
+  font-size: 0.68rem;
+  letter-spacing: 0.17em;
+  padding: 0.9rem 1.5rem;
+}
+
+.speaking-hero-inner .text-btn:hover {
+  color: #d2957f;
+  background: transparent;
+}
+
+.speaking-section {
+  padding: 4.9rem 0;
+}
+
+.speaking-section.alt-bg {
+  background: #efece8;
+}
+
+.speaking-content-wrap {
+  max-width: 1020px;
+}
+
+.speaking-heading-wrap {
+  max-width: 1020px;
+}
+
+.speaking-section .section-label {
+  margin: 0 0 0.7rem;
+  color: #d39a84 !important;
+  text-transform: uppercase;
+  font-size: 0.61rem;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.speak-page h2 {
+  margin: 0 0 0.9rem;
+  font-size: clamp(2.55rem, 4vw, 4.3rem);
+  line-height: 0.99;
+  letter-spacing: -0.01em;
+  color: #232936;
+}
+
+.speak-page p {
+  color: #747f8f;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.audience-section .section-label {
+  margin-bottom: 0.86rem;
+  font-size: 1rem !important;
+}
+
+.audience-section h2 {
+  margin-bottom: 1.1rem;
+}
+
+.audience-section p {
+  margin-bottom: 0.68rem;
+}
+
+.audience-intro {
+  margin-top: 1rem !important;
+  color: #4f5562 !important;
+  font-weight: 500;
+}
+
+.audience-points {
+  margin: 0.8rem 0 1rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.audience-points li {
+  margin: 0.5rem 0;
+  color: #7c8594;
+  font-size: 0.89rem;
+  line-height: 1.48;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.audience-points li::before {
+  content: "\2013";
+  position: absolute;
+  left: 0;
+  color: #c7c2bd;
+}
+
+.audience-note {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #6a6670 !important;
+}
+
+.focus-section {
+  padding-top: 4.6rem;
+  padding-bottom: 4.8rem;
+}
+
+.focus-section .speaking-heading-wrap {
+  margin-bottom: 1.6rem;
+}
+
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.focus-card {
+  border: 1px solid #ddd5ce;
+  background: #f8f6f4;
+  padding: 0.85rem 0.82rem;
+  min-height: 122px;
+}
+
+.focus-card h3 {
+  margin: 0 0 0.35rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.02rem;
+  color: #242a36;
+  line-height: 1.06;
+}
+
+.focus-card p {
+  margin: 0;
+  font-size: 0.73rem;
+  line-height: 1.42;
+}
+
+.framework-section .framework-tags {
+  margin: 0.7rem 0 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.framework-tags span {
+  display: inline-block;
+  border: 1px solid #e3c9ba;
+  background: #f2dfd5;
+  color: #cf927f;
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.28rem 0.56rem;
+}
+
+.press-section .speaking-heading-wrap {
+  margin-bottom: 1.45rem;
+}
+
+.media-list {
+  max-width: 1020px;
+}
+
+.media-list article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #e0d9d2;
+  padding: 0.86rem 0;
+}
+
+.media-list article:first-child {
+  border-top: 0;
+}
+
+.media-list span {
+  color: #343743;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.05rem;
+}
+
+.media-list a {
+  text-decoration: none;
+  color: #d29a84;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.media-list a::after {
+  content: " \2197";
+  font-size: 0.72rem;
+}
+
+.quote-section {
+  background: #f8f6f4;
+}
+
+.quote-wrap {
+  max-width: 1020px;
+}
+
+.quote-wrap blockquote {
+  margin: 0;
+  color: #3f434f;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.5rem, 2.8vw, 2.45rem);
+  line-height: 1.23;
+  font-style: italic;
+}
+
+.quote-wrap .quote-name {
+  margin-top: 1rem;
+  color: #d29a84 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.62rem;
+  font-weight: 600;
+}
+
+.quote-wrap .quote-role {
+  margin-top: 0.25rem;
+  color: #7b808a;
+  font-size: 0.73rem;
+}
+
+.resources-section .resource-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.resources-section .text-btn {
+  border: 1px solid #d7cec7;
+  color: #8f949e;
+  background: transparent;
+  font-size: 0.6rem;
+  letter-spacing: 0.16em;
+  padding: 0.7rem 1rem;
+}
+
+.resources-section .text-btn.filled {
+  background: #d39a84;
+  border-color: #d39a84;
+  color: #fff;
+}
+
+.speak-cta {
+  background: #262d3c;
+  padding: 4.6rem 0 5rem;
+}
+
+.speak-cta h2 {
+  color: #f1ece8;
+  margin-bottom: 0.8rem;
+}
+
+.speak-cta p {
+  max-width: 680px;
+  margin: 0 auto;
+  color: #cfc8c5;
+}
+
+.speak-cta .hero-cta {
+  margin-top: 1.2rem;
+}
+
+.speak-page .footer-top {
+  padding-top: 4.1rem;
+}
+
+@media (max-width: 980px) {
+  .focus-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .speaking-hero-lite {
+    padding: 3.4rem 0 3rem;
+  }
+
+  .speaking-section {
+    padding: 3.5rem 0;
+  }
+
+  .focus-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .media-list article {
+    gap: 0.9rem;
+  }
+
+  .media-list span {
+    font-size: 0.96rem;
+  }
+}
