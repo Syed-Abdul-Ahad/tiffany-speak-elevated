@@ -9,79 +9,6 @@
 }
 
 /* ------------------------------
-    Shared header styling (copied from home/styles.css)
-    ------------------------------ */
-
-.home-header {
-   position: sticky;
-   top: 0;
-   z-index: 20;
-   border-bottom: 1px solid #e4dfda;
-   background: rgba(250, 248, 246, 0.96);
-   backdrop-filter: blur(8px);
-}
-
-.home-header-inner {
-   min-height: 78px;
-   gap: 1.5rem;
-}
-
-/* Match Home page container width so header aligns consistently */
-body .container {
-   width: min(1120px, 92%);
-}
-
-.brand-mark {
-   width: 60px;
-   height: 60px;
-   border: 1px solid #ede6df;
-   border-radius: 2px;
-   display: grid;
-   place-items: center;
-   color: #c8846f;
-   text-decoration: none;
-   letter-spacing: 0.18em;
-   font-size: 0.8rem;
-}
-
-.home-nav {
-   gap: 1.2rem;
-   align-items: center;
-}
-
-.home-nav a {
-   font-size: 0.74rem;
-   text-transform: uppercase;
-   letter-spacing: 0.18em;
-   color: #8b8178;
-   padding: 0;
-   border-radius: 0;
-   text-decoration: none;
-   background: none;
-}
-
-.home-nav a:hover,
-.home-nav a.active {
-   background: none;
-   color: #3d3430;
-}
-
-.home-nav .book-btn {
-   padding: 0.52rem 0.95rem;
-   border: 1px solid #c8846f;
-   color: #fff;
-   background: #c8846f;
-   border-radius: 2px;
-   transition: 0.25s ease;
-}
-
-.home-nav .book-btn:hover,
-.home-nav .book-btn.active {
-   color: #c8846f;
-   background: transparent;
-}
-
-/* ------------------------------
    Shared footer styling (copied from home/styles.css)
    ------------------------------ */
 
@@ -174,11 +101,6 @@ body .container {
 /* Let the Work page follow the warm, flat background from the design */
 body {
    background: var(--work-hero-bg);
-}
-
-.site-header {
-   background: rgba(243, 239, 233, 0.75);
-   border-bottom: 1px solid rgba(24, 28, 34, 0.1);
 }
 
 .work-hero {

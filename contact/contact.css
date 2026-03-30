@@ -3,79 +3,6 @@
 */
 
 /* ------------------------------
-    Shared header styling (copied from home/styles.css)
-    ------------------------------ */
-
-.home-header {
-   position: sticky;
-   top: 0;
-   z-index: 20;
-   border-bottom: 1px solid #e4dfda;
-   background: rgba(250, 248, 246, 0.96);
-   backdrop-filter: blur(8px);
-}
-
-.home-header-inner {
-   min-height: 78px;
-   gap: 1.5rem;
-}
-
-/* Match Home page container width so header aligns consistently */
-body .container {
-   width: min(1120px, 92%);
-}
-
-.brand-mark {
-   width: 60px;
-   height: 60px;
-   border: 1px solid #ede6df;
-   border-radius: 2px;
-   display: grid;
-   place-items: center;
-   color: #c8846f;
-   text-decoration: none;
-   letter-spacing: 0.18em;
-   font-size: 0.8rem;
-}
-
-.home-nav {
-   gap: 1.2rem;
-   align-items: center;
-}
-
-.home-nav a {
-   font-size: 0.74rem;
-   text-transform: uppercase;
-   letter-spacing: 0.18em;
-   color: #8b8178;
-   padding: 0;
-   border-radius: 0;
-   text-decoration: none;
-   background: none;
-}
-
-.home-nav a:hover,
-.home-nav a.active {
-   background: none;
-   color: #3d3430;
-}
-
-.home-nav .book-btn {
-   padding: 0.52rem 0.95rem;
-   border: 1px solid #c8846f;
-   color: #fff;
-   background: #c8846f;
-   border-radius: 2px;
-   transition: 0.25s ease;
-}
-
-.home-nav .book-btn:hover,
-.home-nav .book-btn.active {
-   color: #c8846f;
-   background: transparent;
-}
-
-/* ------------------------------
    Shared footer styling (copied from home/styles.css)
    ------------------------------ */
 
@@ -173,11 +100,6 @@ body {
    background: #efece7;
 }
 
-.site-header {
-   background: rgba(239, 236, 231, 0.7);
-   border-bottom: 1px solid rgba(24, 28, 34, 0.1);
-}
-
 .contact-page {
    color: #1f232c;
 }
@@ -220,6 +142,99 @@ body {
 .contact-main {
    padding: 6rem 0 8rem;
    background-color: #F8F6F2 !important;
+}
+
+/* ------------------------------
+   Stay Connected (match Events)
+   ------------------------------ */
+
+/* Contact now reuses the Events Stay Connected markup/classes. */
+.contact-stay.events-stay {
+   background: #f4ebe5;
+   padding: 3.25rem 0;
+}
+
+.contact-stay.events-stay .events-stay__inner {
+   display: grid;
+   gap: 1.25rem;
+   justify-items: center;
+   text-align: center;
+}
+
+.contact-stay.events-stay .events-stay__title {
+   margin: 0;
+   font-family: "Cormorant Garamond", Georgia, serif;
+   font-weight: 400;
+   font-size: clamp(2rem, 3vw, 2.65rem);
+   letter-spacing: -0.01em;
+}
+
+.contact-stay.events-stay .events-stay__subtitle {
+   margin: 0.65rem 0 0;
+   max-width: 48rem;
+   color: rgba(31, 35, 44, 0.64);
+   line-height: 1.6;
+   font-size: 0.98rem;
+}
+
+.contact-stay.events-stay .events-stay__form {
+   width: min(640px, 100%);
+   display: grid;
+   grid-template-columns: 1fr 1fr 1.1fr auto;
+   gap: 0.95rem;
+   align-items: center;
+}
+
+/* Keep 4-up row layout like the reference; only stack on small screens */
+@media (max-width: 680px) {
+   .contact-stay.events-stay .events-stay__form {
+      grid-template-columns: 1fr;
+   }
+
+   .contact-stay.events-stay .events-stay__btn {
+      width: min(220px, 100%);
+      justify-self: center;
+   }
+}
+
+.contact-stay.events-stay .events-stay__form input {
+   background: rgba(255, 255, 255, 0.68);
+   border: 1px solid rgba(24, 28, 34, 0.12);
+   border-radius: 0;
+   padding: 0.75rem 0.95rem;
+   font-size: 0.92rem;
+   transition: border-color 200ms ease, box-shadow 200ms ease, background 200ms ease;
+}
+
+.contact-stay.events-stay .events-stay__form input:focus {
+   outline: none;
+   border-color: rgba(216, 124, 90, 0.7);
+   box-shadow: 0 0 0 4px rgba(216, 124, 90, 0.15);
+   background: rgba(255, 255, 255, 0.82);
+}
+
+.contact-stay.events-stay .events-stay__btn {
+   border: 0;
+   border-radius: 0;
+   background: #c8846f;
+   color: #fff;
+   padding: 0.78rem 1.9rem;
+   font-weight: 600;
+   letter-spacing: 0.22em;
+   text-transform: uppercase;
+   cursor: pointer;
+   transition: transform 180ms ease, filter 180ms ease;
+}
+
+.contact-stay.events-stay .events-stay__btn:hover {
+   filter: brightness(0.96);
+   transform: translateY(-1px);
+}
+
+@media (max-width: 520px) {
+   .contact-stay.events-stay {
+      padding: 3.1rem 0;
+   }
 }
 
 .contact-main__grid {

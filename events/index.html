@@ -7,11 +7,11 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../assets/css/styles.css" />
+	<link rel="stylesheet" href="../home/styles.css" />
 	<link rel="stylesheet" href="./events.css" />
 </head>
 
-<body class="page-events">
+<body class="home-page page-events">
 	 <header class="site-header home-header">
     <div class="container header-inner home-header-inner">
       <a class="brand-mark" href="../home/index.html" aria-label="Tiffany Haywood home">
@@ -24,7 +24,7 @@
         <a href="../events/index.html">Events</a>
         <a href="../work/index.html">Work</a>
         <a href="../contact/index.html">Contact</a>
-        <a class="book-btn" href="../contact/index.html">Book Tiffany</a>
+	<a class="book-btn" href="../book/index.html">Book Tiffany</a>
       </nav>
     </div>
   </header>
@@ -58,13 +58,10 @@
 				</header>
 
 				<form class="events-stay__form" autocomplete="on" data-animate="fade-up" data-animate-delay="120">
-					<label class="sr-only" for="stay-first">First name</label>
-					<input id="stay-first" name="firstName" type="text" placeholder="First Name" />
-					<label class="sr-only" for="stay-last">Last name</label>
-					<input id="stay-last" name="lastName" type="text" placeholder="Last Name" />
-					<label class="sr-only" for="stay-email">Email</label>
-					<input id="stay-email" name="email" type="email" placeholder="Email" />
-					<button type="submit" class="events-stay__btn">Join</button>
+					<input id="stay-first" name="firstName" type="text" placeholder="First Name" aria-label="First Name" />
+					<input id="stay-last" name="lastName" type="text" placeholder="Last Name" aria-label="Last Name" />
+					<input id="stay-email" name="email" type="email" placeholder="Email" aria-label="Email" />
+					<button type="submit" class="events-stay__btn">JOIN</button>
 				</form>
 			</div>
 		</section>

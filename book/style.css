@@ -1,0 +1,192 @@
+:root {
+	--book-bg: #f4f2f0;
+	--book-paper: #f8f6f3;
+	--book-card: #fbfaf9;
+	--book-line: #e4dfda;
+	--book-ink: #24222a;
+	--book-muted: #788190;
+	--book-accent: #cf917b;
+	--book-accent-strong: #c8846f;
+	--book-deep: #2d3139;
+}
+
+/* Page scaffolding */
+.book-page {
+	background: var(--book-bg);
+}
+
+.book-main {
+	min-height: calc(100vh - 78px);
+}
+
+/* Hero */
+.book-hero {
+	background: var(--book-bg);
+	padding: 5.6rem 0 2.6rem;
+}
+
+.book-hero__inner {
+	max-width: 1280px;
+}
+
+.book-hero__eyebrow {
+	margin: 0 0 1.3rem;
+	color: var(--book-accent) !important;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-size: 0.62rem;
+	font-weight: 600;
+}
+
+.book-hero__title {
+	margin: 0;
+	font-size: clamp(4.4rem, 6.8vw, 6.6rem);
+	color: var(--book-ink);
+	line-height: 0.92;
+	letter-spacing: -0.018em;
+}
+
+.book-hero__subtitle {
+	margin: 1.8rem 0 0;
+	color: #8b93a2;
+	max-width: 640px;
+	font-size: 1.05rem;
+	line-height: 1.6;
+}
+
+/* More accurate left offset (inspiration has wider left gutter than other pages) */
+.book-page .container {
+	width: min(1240px, 92%);
+}
+
+.book-hero__inner {
+	padding-left: clamp(0px, 2.4vw, 34px);
+}
+
+/* Cards grid */
+.book-options {
+	background: #F8F6F2;
+	padding: 4.2rem 0 5.4rem;
+}
+
+.book-grid {
+	width: min(850px, 75%) !important;
+	margin: auto auto;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1rem 1rem !important;
+    place-items: center;
+
+}
+
+.book-card {
+	background:#FBFAF9;
+	border: 1px solid #e4dfda;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+	padding: 2rem 2rem 2.2rem;
+	text-align: left;
+    width: 100%;
+}
+
+.book-card__icon {
+	width: 40px;
+	height: 40px;
+	margin: 0 0 0.95rem;
+	border-radius: 999px;
+	display: grid;
+	place-items: center;
+	background: #f2ece8;
+	color: #d08971;
+}
+
+.book-card__icon svg {
+	width: 26px;
+	height: 26px;
+}
+
+.book-card__title {
+	margin: 0.15rem 0 0.8rem;
+	font-family: "Cormorant Garamond", Georgia, serif;
+	font-size: 1.45rem !important;
+	line-height: 1.12;
+	font-weight: 500;
+	color: #232734;
+}
+
+.book-card__copy {
+	margin: 0 0 1.55rem;
+	max-width: 360px;
+	color: #7e8796;
+	font-size: 0.82rem !important;
+	line-height: 1.5;
+}
+
+.book-card__btn {
+	display: inline-block;
+	width: 100%;
+	min-width: 0;
+	padding: 0.82rem 0.5rem;
+	border-radius: 2px;
+	border: 1px solid var(--book-accent-strong);
+	background: var(--book-accent-strong);
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.22em;
+	font-size: 0.62rem;
+	font-weight: 700;
+	transition: 0.25s ease;
+	text-align: center;
+}
+
+.book-card__btn:hover {
+	background: transparent;
+	color: var(--book-accent-strong);
+}
+
+.book-card__btn[data-variant="outline"] {
+	background: var(--book-accent-strong);
+}
+
+/* Note strip (above footer) */
+.book-note {
+	background: #F4EBE5;
+	border-top: 1px solid rgba(0, 0, 0, 0.03);
+	padding: 2.2rem 0;
+}
+
+.book-note__inner {
+	text-align: center;
+}
+
+.book-note__inner p {
+	margin: 0;
+	color: #77726f;
+	font-size: 0.78rem;
+}
+
+@media (max-width: 980px) {
+	.book-hero {
+		padding-top: 5rem;
+	}
+
+	.book-grid {
+		grid-template-columns: 1fr;
+		gap: 1.6rem;
+	}
+
+	.book-card {
+		padding: 2rem 1.6rem 1.8rem;
+	}
+}
+
+@media (max-width: 760px) {
+	.book-hero {
+		padding: 4.2rem 0 1.8rem;
+	}
+
+	.book-card__btn {
+		width: 100%;
+		min-width: 0;
+	}
+}
