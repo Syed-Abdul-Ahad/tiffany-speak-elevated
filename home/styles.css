@@ -940,7 +940,13 @@ textarea {
 
 .footer-top a:hover,
 .footer-link {
-  color: #db9f88;
+  color: #db9f88 !important;
+}
+
+#link-to-speak{
+  color: #db9f88 !important;
+  font-size: larger !important;
+  font-weight: bold;
 }
 
 .footer-bottom {
