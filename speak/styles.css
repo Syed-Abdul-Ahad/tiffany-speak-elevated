@@ -218,7 +218,7 @@
 }
 
 .media-list {
-  max-width: 1020px;
+  max-width: 700px;
 }
 
 .media-list article {
@@ -234,7 +234,7 @@
 }
 
 .media-list span {
-  color: #343743;
+  color: #1c1c1d;
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 1.05rem;
 }
@@ -257,14 +257,14 @@
 }
 
 .quote-wrap {
-  max-width: 1020px;
+  max-width: 800px;
 }
 
 .quote-wrap blockquote {
   margin: 0;
   color: #3f434f;
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(1.5rem, 2.8vw, 2.45rem);
+  font-size: clamp(1.1rem, 2.3vw, 2.2rem);
   line-height: 1.23;
   font-style: italic;
 }
@@ -273,8 +273,8 @@
   margin-top: 1rem;
   color: #d29a84 !important;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  font-size: 1rem;
   font-weight: 600;
 }
 
@@ -285,7 +285,7 @@
 }
 
 .resources-section .resource-actions {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   display: flex;
   gap: 0.6rem;
   flex-wrap: wrap;
@@ -295,30 +295,35 @@
   border: 1px solid #d7cec7;
   color: #8f949e;
   background: transparent;
-  font-size: 0.6rem;
-  letter-spacing: 0.16em;
-  padding: 0.7rem 1rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  width: 17.5rem;
+  padding: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .resources-section .text-btn.filled {
   background: #d39a84;
-  border-color: #d39a84;
   color: #fff;
 }
 
 .speak-cta {
-  background: #262d3c;
-  padding: 4.6rem 0 5rem;
+  background: #2d3139;
+  padding: 5.2rem 0 6rem;
 }
 
 .speak-cta h2 {
   color: #f1ece8;
-  margin-bottom: 0.8rem;
+  margin-bottom: 2rem;
 }
 
 .speak-cta p {
-  max-width: 680px;
+  max-width: 560px;
   margin: 0 auto;
+  margin-bottom: 1rem;
   color: #cfc8c5;
 }
 
