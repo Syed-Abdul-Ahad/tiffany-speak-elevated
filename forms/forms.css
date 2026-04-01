@@ -17,8 +17,8 @@
 }
 
 .forms-hero {
-  background: var(--forms-paper);
-  padding: 4.2rem 0 4rem;
+  background: #EFECE7;
+  padding: 6rem 0 6rem;
 }
 
 .forms-hero__inner {
@@ -28,7 +28,7 @@
 .forms-hero__title {
   margin: 0;
   color: #22212a;
-  font-size: clamp(2.6rem, 4.2vw, 4.2rem);
+  font-size: clamp(3.5rem, 5.5vw, 5.2rem);
   line-height: 1.05;
   letter-spacing: -0.01em;
 }
@@ -58,6 +58,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.9rem;
+}
+
+.form-grid--thirds {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .field {
@@ -152,6 +156,236 @@
   font-size: 0.75rem;
 }
 
+.forms-hero__label {
+  margin: 0 0 0.8rem;
+  color: #c8846f;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.book-call-page .booking-container {
+  width: min(1150px, 92%);
+}
+
+.book-call-page .booking-section {
+  padding-top: 3.9rem;
+}
+
+.book-call-page .booking-shell {
+  background: #f9f8f7;
+  border: 1px solid var(--forms-line);
+  min-height: 470px;
+  display: grid;
+  grid-template-columns: 36% 64%;
+}
+
+.book-call-page .booking-intro {
+  padding: 2rem 1.15rem 1.4rem;
+  border-right: 1px solid var(--forms-line);
+}
+
+.book-call-page .booking-intro img {
+  width: 44px;
+  height: 44px;
+}
+
+.book-call-page .booking-kicker {
+  margin: 1.1rem 0 0.34rem;
+  font-size: 0.83rem;
+  color: #7d8593;
+}
+
+.book-call-page .booking-intro h2 {
+  margin: 0;
+  font-size: 2.15rem;
+  color: #1f2029;
+  line-height: 1.08;
+}
+
+.book-call-page .booking-meta {
+  margin: 0.62rem 0 0;
+  color: #687283;
+  font-size: 0.84rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.book-call-page .booking-meta-icon {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 auto;
+}
+
+.book-call-page .booking-intro p {
+  margin-top: 0.95rem;
+  color: #697382;
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.book-call-page .booking-scheduler {
+  padding: 1.85rem 1.2rem 1.3rem;
+}
+
+.book-call-page .booking-scheduler h3 {
+  margin: 0 0 1rem;
+  color: #171821;
+  font-size: 1.95rem;
+  line-height: 1.05;
+}
+
+.book-call-page .booking-grid {
+  display: grid;
+  grid-template-columns: 1fr 136px;
+  gap: 1rem;
+}
+
+.book-call-page .calendar-top {
+  display: grid;
+  grid-template-columns: 26px 1fr 26px;
+  align-items: center;
+  margin-bottom: 0.68rem;
+}
+
+.book-call-page .calendar-top p {
+  margin: 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #2a2f3a;
+  font-weight: 500;
+}
+
+.book-call-page .calendar-arrow {
+  border: 0;
+  background: transparent;
+  color: #666f7f;
+  font-size: 1.8rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.book-call-page .calendar-weekdays,
+.book-call-page .calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.38rem;
+}
+
+.book-call-page .calendar-weekdays {
+  margin-bottom: 0.52rem;
+}
+
+.book-call-page .calendar-weekdays span {
+  text-align: center;
+  font-size: 1rem !important;
+  color: #788293;
+}
+
+.book-call-page .calendar-empty,
+.book-call-page .calendar-day {
+  width: 33px;
+  height: 33px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.book-call-page .calendar-day {
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  color: #be7f67;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: transform 0.16s ease, border-color 0.16s ease, background-color 0.16s ease;
+}
+
+.book-call-page .calendar-day:hover {
+  border-color: #dcc5b8;
+  transform: scale(1.08);
+}
+
+.book-call-page .calendar-day.is-selected {
+  background: #c8846f;
+  color: #fff;
+  border-color: #c8846f;
+  font-weight: 600;
+  transform: scale(1.1);
+}
+
+.book-call-page .timezone-label {
+  margin: 1.05rem 0 0.3rem;
+  display: block;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #161821;
+  font-size: 0.67rem;
+  font-weight: 600;
+}
+
+.book-call-page .timezone-select {
+  width: 100%;
+  border: 1px solid #e3ddd7;
+  background: #faf9f8;
+  color: #657082;
+  font-size: 0.75rem;
+  padding: 0.5rem 0.65rem;
+  border-radius: 2px;
+}
+
+.book-call-page .time-slots {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.book-call-page .time-slot,
+.book-call-page .confirm-btn {
+  width: 100%;
+  min-height: 40px;
+  border-radius: 2px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.book-call-page .time-slot {
+  background: #fff;
+  border: 1px solid #e6e0da;
+  color: #2a3140;
+}
+
+.book-call-page .time-slot:hover {
+  border-color: #d3a28f;
+}
+
+.book-call-page .time-slot.is-selected,
+.book-call-page .confirm-btn {
+  background: #c8846f;
+  border: 1px solid #c8846f;
+  color: #fff;
+}
+
+.book-call-page .confirm-btn {
+  margin-top: 0.22rem;
+}
+
+.book-call-page .booking-note {
+  margin: 1.05rem 0 0;
+  text-align: center;
+  color: #7f8796;
+  font-size: 0.82rem;
+}
+
+.book-call-page .booking-note a {
+  color: #c8846f;
+  text-decoration: none;
+}
+
 @media (max-width: 760px) {
   .forms-hero {
     padding: 3.2rem 0 3rem;
@@ -161,7 +395,34 @@
     grid-template-columns: 1fr;
   }
 
+  .form-grid--thirds {
+    grid-template-columns: 1fr;
+  }
+
   .form-shell {
     padding: 1.5rem;
+  }
+
+  .book-call-page .forms-hero__title {
+    font-size: clamp(2.45rem, 10vw, 3.1rem);
+  }
+
+  .book-call-page .booking-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .book-call-page .booking-intro {
+    border-right: 0;
+    border-bottom: 1px solid var(--forms-line);
+  }
+
+  .book-call-page .booking-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .book-call-page .calendar-empty,
+  .book-call-page .calendar-day {
+    width: 30px;
+    height: 30px;
   }
 }

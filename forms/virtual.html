@@ -1,1 +1,242 @@
-<!-- Virtual Meeting Form -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Virtual Speaking Request | Tiffany N. Haywood</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+	<link rel="stylesheet" href="../home/styles.css" />
+	<link rel="stylesheet" href="./forms.css" />
+</head>
+
+<body class="home-page forms-page">
+	<header class="site-header home-header">
+		<div class="container header-inner home-header-inner">
+			<a class="brand-mark" href="../home/index.html" aria-label="Tiffany Haywood home">
+				<span><img src="../assets/pictures/logo.png" alt="Tiffany N. Haywood" width="60" height="60" /></span>
+			</a>
+			<nav class="site-nav home-nav" aria-label="Main navigation">
+				<a href="../home/index.html">Home</a>
+				<a href="../about/index.html">About</a>
+				<a href="../speak/index.html">Speaking</a>
+				<a href="../events/index.html">Events</a>
+				<a href="../work/index.html">Work</a>
+				<a href="../contact/index.html">Contact</a>
+				<a class="book-btn" href="../book/index.html">Book Tiffany</a>
+			</nav>
+		</div>
+	</header>
+
+	<main class="forms-main">
+		<section class="forms-hero" aria-label="Virtual speaking request hero">
+			<div class="container forms-hero__inner">
+				<h1 class="forms-hero__title">Virtual Speaking Request</h1>
+			</div>
+		</section>
+
+		<section class="forms-section" aria-label="Virtual speaking request form">
+			<div class="container">
+				<form class="form-shell" id="virtual-form" novalidate>
+					<h2 class="form-shell__title">Virtual Event Speaking Request</h2>
+
+					<div class="form-grid">
+						<div class="field">
+							<label for="firstName">First Name <span aria-hidden="true">*</span></label>
+							<input id="firstName" name="firstName" type="text" placeholder="First Name" required />
+						</div>
+						<div class="field">
+							<label for="lastName">Last Name <span aria-hidden="true">*</span></label>
+							<input id="lastName" name="lastName" type="text" placeholder="Last Name" required />
+						</div>
+					</div>
+
+					<div class="field">
+						<label for="email">Email Address <span aria-hidden="true">*</span></label>
+						<input id="email" name="email" type="email" placeholder="Email" required />
+					</div>
+
+					<div class="field">
+						<label for="phone">Phone Number <span aria-hidden="true">*</span></label>
+						<input id="phone" name="phone" type="tel" placeholder="Phone Number" required />
+					</div>
+
+					<div class="field">
+						<label for="organization">Organization / Company <span aria-hidden="true">*</span></label>
+						<input id="organization" name="organization" type="text" placeholder="Organization / Company" required />
+					</div>
+
+					<div class="field">
+						<label for="mailingAddress">Mailing Address <span aria-hidden="true">*</span></label>
+						<input id="mailingAddress" name="mailingAddress" type="text" placeholder="Mailing Address" required />
+					</div>
+
+					<div class="form-grid form-grid--thirds">
+						<div class="field">
+							<label for="city">City <span aria-hidden="true">*</span></label>
+							<input id="city" name="city" type="text" placeholder="City" required />
+						</div>
+						<div class="field">
+							<label for="state">State <span aria-hidden="true">*</span></label>
+							<input id="state" name="state" type="text" placeholder="State" required />
+						</div>
+						<div class="field">
+							<label for="postalCode">Postal Code <span aria-hidden="true">*</span></label>
+							<input id="postalCode" name="postalCode" type="text" placeholder="Postal Code" required />
+						</div>
+					</div>
+
+					<div class="field">
+						<label for="country">Country <span aria-hidden="true">*</span></label>
+						<input id="country" name="country" type="text" placeholder="Country" required />
+					</div>
+
+					<div class="field">
+						<label for="eventName">Name of Event <span aria-hidden="true">*</span></label>
+						<input id="eventName" name="eventName" type="text" placeholder="Name of Event" required />
+					</div>
+
+					<div class="form-grid">
+						<div class="field">
+							<label for="eventDate">Event Date <span aria-hidden="true">*</span></label>
+							<input id="eventDate" name="eventDate" type="date" required />
+						</div>
+						<div class="field">
+							<label for="startTime">Start Time <span aria-hidden="true">*</span></label>
+							<input id="startTime" name="startTime" type="time" required />
+						</div>
+					</div>
+
+					<div class="field">
+						<label for="dateFlexible">Is Your Date Flexible? <span aria-hidden="true">*</span></label>
+						<select id="dateFlexible" name="dateFlexible" required>
+							<option value="" selected disabled>Select</option>
+							<option value="yes">Yes</option>
+							<option value="no">No</option>
+						</select>
+					</div>
+
+					<div class="field">
+						<label for="budget">Speaking Budget <span aria-hidden="true">*</span></label>
+						<input id="budget" name="budget" type="text" placeholder="$" required />
+					</div>
+
+					<div class="field">
+						<label for="engagementType">Type of Virtual Engagement <span aria-hidden="true">*</span></label>
+						<select id="engagementType" name="engagementType" required>
+							<option value="" selected disabled>Select type</option>
+							<option value="keynote">Keynote</option>
+							<option value="panel">Panel</option>
+							<option value="workshop">Workshop</option>
+							<option value="fireside-chat">Fireside Chat</option>
+							<option value="podcast">Podcast Interview</option>
+							<option value="other">Other</option>
+						</select>
+					</div>
+
+					<div class="field">
+						<label for="details">Details and Purpose of the Event <span aria-hidden="true">*</span></label>
+						<textarea id="details" name="details" rows="4" placeholder="Describe the event and its purpose..." required></textarea>
+					</div>
+
+					<div class="field">
+						<label for="openToPublic">Will This Event Be Open to the Public? <span aria-hidden="true">*</span></label>
+						<select id="openToPublic" name="openToPublic" required>
+							<option value="" selected disabled>Select</option>
+							<option value="yes">Yes</option>
+							<option value="no">No</option>
+							<option value="invite-only">Invite Only</option>
+						</select>
+					</div>
+
+					<div class="field">
+						<label for="recordEvent">Do You Intend to Record This Event? <span aria-hidden="true">*</span></label>
+						<select id="recordEvent" name="recordEvent" required>
+							<option value="" selected disabled>Select</option>
+							<option value="yes">Yes</option>
+							<option value="no">No</option>
+							<option value="unsure">Unsure</option>
+						</select>
+					</div>
+
+					<div class="field">
+						<label for="audienceSize">Estimated Size of Audience <span aria-hidden="true">*</span></label>
+						<input id="audienceSize" name="audienceSize" type="text" placeholder="Estimated audience size" required />
+					</div>
+
+					<div class="field">
+						<label for="platform">Platform You Will Be Using <span aria-hidden="true">*</span></label>
+						<input id="platform" name="platform" type="text" placeholder="Zoom, StreamYard, Teams, Riverside, Other" required />
+					</div>
+
+					<div class="field">
+						<label for="graphics">Will Promotional Graphics Be Provided?</label>
+						<select id="graphics" name="graphics">
+							<option value="" selected disabled>Select</option>
+							<option value="yes">Yes</option>
+							<option value="no">No</option>
+							<option value="in-progress">In Progress</option>
+						</select>
+					</div>
+
+					<div class="field">
+						<label for="referral">How Did You Hear About Tiffany? <span aria-hidden="true">*</span></label>
+						<select id="referral" name="referral" required>
+							<option value="" selected disabled>Select</option>
+							<option value="google">Google</option>
+							<option value="instagram">Instagram</option>
+							<option value="linkedin">LinkedIn</option>
+							<option value="referral">Referral</option>
+							<option value="facebook">Facebook</option>
+							<option value="past-event">Attended Past Event</option>
+							<option value="youtube">YouTube</option>
+							<option value="other">Other</option>
+						</select>
+					</div>
+
+					<div class="field">
+						<label for="notes">Additional Notes</label>
+						<textarea id="notes" name="notes" rows="4" placeholder="Any additional notes..."></textarea>
+					</div>
+
+					<button class="form-submit" type="submit">Submit</button>
+					<p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer home-footer">
+		<div class="container footer-top">
+			<div>
+				<h3>Tiffany N. Haywood</h3>
+				<p>Transformational speaker, mentor, and holistic detox specialist empowering audiences to detox their lives.</p>
+			</div>
+			<div>
+				<h4>Navigate</h4>
+				<a href="../about/index.html">About</a>
+				<a href="../speak/index.html">Speaking</a>
+				<a href="../events/index.html">Events</a>
+				<a href="../work/index.html">Work</a>
+				<a href="../contact/index.html">Contact</a>
+			</div>
+			<div>
+				<h4>Speaking Inquiries</h4>
+				<p>For keynotes, panels, and corporate engagements.</p>
+				<a class="footer-link" id="link-to-speak" href="../book/index.html">Submit Speaking Inquiry &rarr;</a>
+			</div>
+		</div>
+		<div class="container footer-bottom">
+			<p>&copy; <span id="year"></span> Tiffany N. Haywood. All rights reserved.</p>
+			<div>
+				<a href="#">Privacy Policy</a>
+				<a href="#">Terms</a>
+			</div>
+		</div>
+	</footer>
+
+	<script src="../assets/js/main.js"></script>
+</body>
+</html>

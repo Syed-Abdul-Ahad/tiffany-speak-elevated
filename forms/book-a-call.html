@@ -1,1 +1,240 @@
-<!-- Template -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Book a Call | Tiffany N. Haywood</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+	<link rel="stylesheet" href="../home/styles.css" />
+	<link rel="stylesheet" href="./forms.css" />
+</head>
+
+<body class="home-page forms-page book-call-page">
+	<header class="site-header home-header">
+		<div class="container header-inner home-header-inner">
+			<a class="brand-mark" href="../home/index.html" aria-label="Tiffany Haywood home">
+				<span><img src="../assets/pictures/logo.png" alt="Tiffany N. Haywood" width="60" height="60" /></span>
+			</a>
+			<nav class="site-nav home-nav" aria-label="Main navigation">
+				<a href="../home/index.html">Home</a>
+				<a href="../about/index.html">About</a>
+				<a href="../speak/index.html">Speaking</a>
+				<a href="../events/index.html">Events</a>
+				<a href="../work/index.html">Work</a>
+				<a href="../contact/index.html">Contact</a>
+				<a class="book-btn" href="../book/index.html">Book Tiffany</a>
+			</nav>
+		</div>
+	</header>
+
+	<main class="forms-main">
+		<section class="forms-hero" aria-label="Book a call hero">
+			<div class="container forms-hero__inner">
+				<p class="forms-hero__label">Collaboration Inquiry</p>
+				<h1 class="forms-hero__title">Book a Call</h1>
+			</div>
+		</section>
+
+		<section class="forms-section booking-section" aria-label="Book a call schedule">
+			<div class="container booking-container">
+				<article class="booking-shell">
+					<aside class="booking-intro">
+						<img src="../assets/pictures/logo.png" alt="Tiffany N. Haywood" width="52" height="52" />
+						<p class="booking-kicker">Schedule Time With Tiffany N. Haywood</p>
+						<h2>Connection Call</h2>
+						<p class="booking-meta">
+							<svg class="booking-meta-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+								<circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8" />
+								<path d="M12 7.6v4.9l3.2 1.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+							<span>30 Mins</span>
+						</p>
+						<p class="booking-meta" id="selected-call-date">
+							<svg class="booking-meta-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+								<rect x="3.5" y="5.5" width="17" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.8" />
+								<path d="M7.5 3.8v3.6M16.5 3.8v3.6M3.5 9.2h17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+							</svg>
+							<span id="selected-call-date-value">Wed, Apr 29, 2026</span>
+						</p>
+						<p>A conversation for podcast hosts, event organizers, companies, and partners interested in working together.</p>
+						<p>This may include speaking engagements, workshops, retreats, wellness events, or other collaborative opportunities.</p>
+					</aside>
+
+					<div class="booking-scheduler">
+						<h3>Select Date &amp; Time</h3>
+						<div class="booking-grid">
+							<div>
+								<div class="calendar-top">
+									  <button class="calendar-arrow" id="prev-month" type="button" aria-label="Previous month">&lsaquo;</button>
+									<p id="month-label">April 2026</p>
+									  <button class="calendar-arrow" id="next-month" type="button" aria-label="Next month">&rsaquo;</button>
+								</div>
+								<div class="calendar-weekdays" aria-hidden="true">
+									<span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+								</div>
+								<div class="calendar-days" id="calendar-days"></div>
+
+								<label class="timezone-label" for="timezone-select">Time zone</label>
+								<select id="timezone-select" class="timezone-select">
+									<option value="America/New_York">GMT-04:00 America/New_York (EDT)</option>
+									<option value="America/Chicago">GMT-05:00 America/Chicago (CDT)</option>
+									<option value="America/Denver">GMT-06:00 America/Denver (MDT)</option>
+									<option value="America/Los_Angeles">GMT-07:00 America/Los_Angeles (PDT)</option>
+								</select>
+							</div>
+
+							<div class="time-slots" role="listbox" aria-label="Available times">
+								<button class="time-slot" type="button">12:00 PM</button>
+								<button class="time-slot" type="button">12:30 PM</button>
+								<button class="time-slot" type="button">01:00 PM</button>
+								<button class="time-slot" type="button">01:30 PM</button>
+								<button class="confirm-btn" id="confirm-booking" type="button" hidden>Confirm</button>
+							</div>
+						</div>
+					</div>
+				</article>
+
+				<p class="booking-note">Can't find a time that works? Please email us at <a href="mailto:info@tiffanynhaywood.com">info@tiffanynhaywood.com</a></p>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer home-footer">
+		<div class="container footer-top">
+			<div>
+				<h3>Tiffany N. Haywood</h3>
+				<p>Transformational speaker, mentor, and holistic detox specialist empowering audiences to detox their lives.</p>
+			</div>
+			<div>
+				<h4>Navigate</h4>
+				<a href="../about/index.html">About</a>
+				<a href="../speak/index.html">Speaking</a>
+				<a href="../events/index.html">Events</a>
+				<a href="../work/index.html">Work</a>
+				<a href="../contact/index.html">Contact</a>
+			</div>
+			<div>
+				<h4>Speaking Inquiries</h4>
+				<p>For keynotes, panels, and corporate engagements.</p>
+				<a class="footer-link" id="link-to-speak" href="../book/index.html">Submit Speaking Inquiry &rarr;</a>
+			</div>
+		</div>
+		<div class="container footer-bottom">
+			<p>&copy; <span id="year"></span> Tiffany N. Haywood. All rights reserved.</p>
+			<div>
+				<a href="#">Privacy Policy</a>
+				<a href="#">Terms</a>
+			</div>
+		</div>
+	</footer>
+
+	<script src="../assets/js/main.js"></script>
+	<script>
+		(function () {
+			const monthNames = [
+				"January", "February", "March", "April", "May", "June",
+				"July", "August", "September", "October", "November", "December"
+			];
+			const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+			let currentMonth = 3;
+			let currentYear = 2026;
+			let selectedDay = 29;
+			let selectedTime = "";
+
+			const monthLabel = document.getElementById("month-label");
+			const daysWrap = document.getElementById("calendar-days");
+				const selectedDateText = document.getElementById("selected-call-date-value");
+			const timeZoneSelect = document.getElementById("timezone-select");
+			const confirmBtn = document.getElementById("confirm-booking");
+			const timeSlots = Array.from(document.querySelectorAll(".time-slot"));
+
+			function daysInMonth(month, year) {
+				return new Date(year, month + 1, 0).getDate();
+			}
+
+			function getDateLabel() {
+				const date = new Date(currentYear, currentMonth, selectedDay);
+				return `${dayNames[date.getDay()]}, ${monthNames[currentMonth].slice(0, 3)} ${selectedDay}, ${currentYear}`;
+			}
+
+			function renderCalendar() {
+				monthLabel.textContent = `${monthNames[currentMonth]} ${currentYear}`;
+				daysWrap.innerHTML = "";
+
+				const firstWeekDay = new Date(currentYear, currentMonth, 1).getDay();
+				const totalDays = daysInMonth(currentMonth, currentYear);
+
+				for (let i = 0; i < firstWeekDay; i += 1) {
+					const emptyCell = document.createElement("span");
+					emptyCell.className = "calendar-empty";
+					daysWrap.appendChild(emptyCell);
+				}
+
+				for (let day = 1; day <= totalDays; day += 1) {
+					const button = document.createElement("button");
+					button.type = "button";
+					button.className = "calendar-day";
+					if (day === selectedDay) {
+						button.classList.add("is-selected");
+					}
+					button.textContent = String(day);
+					button.addEventListener("click", function () {
+						selectedDay = day;
+						renderCalendar();
+						selectedDateText.textContent = getDateLabel();
+					});
+					daysWrap.appendChild(button);
+				}
+			}
+
+			document.getElementById("prev-month").addEventListener("click", function () {
+				currentMonth -= 1;
+				if (currentMonth < 0) {
+					currentMonth = 11;
+					currentYear -= 1;
+				}
+				selectedDay = 1;
+				renderCalendar();
+				selectedDateText.textContent = getDateLabel();
+			});
+
+			document.getElementById("next-month").addEventListener("click", function () {
+				currentMonth += 1;
+				if (currentMonth > 11) {
+					currentMonth = 0;
+					currentYear += 1;
+				}
+				selectedDay = 1;
+				renderCalendar();
+				selectedDateText.textContent = getDateLabel();
+			});
+
+			timeSlots.forEach(function (slot) {
+				slot.addEventListener("click", function () {
+					timeSlots.forEach(function (node) { node.classList.remove("is-selected"); });
+					slot.classList.add("is-selected");
+					selectedTime = slot.textContent.trim();
+					confirmBtn.hidden = false;
+				});
+			});
+
+			confirmBtn.addEventListener("click", function () {
+				if (!selectedTime) return;
+				const tzText = timeZoneSelect.options[timeZoneSelect.selectedIndex].text;
+				const subject = encodeURIComponent("Connection Call Booking Request");
+				const body = encodeURIComponent(
+					`Hi Tiffany,\n\nI would like to confirm this call slot:\nDate: ${getDateLabel()}\nTime: ${selectedTime}\nTime zone: ${tzText}\n\nThank you.`
+				);
+				window.location.href = `mailto:info@tiffanynhaywood.com?subject=${subject}&body=${body}`;
+			});
+
+			selectedDateText.textContent = getDateLabel();
+			renderCalendar();
+		})();
+	</script>
+</body>
+</html>
