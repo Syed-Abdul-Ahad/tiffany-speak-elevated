@@ -121,13 +121,15 @@
   var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   if (isAnimatedPage && !prefersReducedMotion) {
+    var isSmallViewport = window.matchMedia("(max-width: 760px)").matches;
+    var staggerStep = isSmallViewport ? 28 : 55;
     var revealTargets = document.querySelectorAll(
       "main section, .feature-card, .plain-card, #events .process-grid article, .founder-grid > *, .about-bullets li"
     );
 
     revealTargets.forEach(function (el, index) {
       el.classList.add("reveal-from-bottom");
-      el.style.setProperty("--reveal-delay", String((index % 6) * 55) + "ms");
+      el.style.setProperty("--reveal-delay", String((index % 6) * staggerStep) + "ms");
     });
 
     if ("IntersectionObserver" in window) {
