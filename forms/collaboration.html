@@ -1,1 +1,192 @@
-<!-- Collaboration Form -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Collaboration Request | Tiffany N. Haywood</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+	<!-- Header / footer visual system -->
+	<link rel="stylesheet" href="../home/styles.css" />
+	<link rel="stylesheet" href="./forms.css" />
+</head>
+
+<body class="home-page forms-page">
+	<header class="site-header home-header">
+		<div class="container header-inner home-header-inner">
+			<a class="brand-mark" href="../home/index.html" aria-label="Tiffany Haywood home">
+				<span><img src="../assets/pictures/logo.png" alt="Tiffany N. Haywood" width="60" height="60" /></span>
+			</a>
+			<nav class="site-nav home-nav" aria-label="Main navigation">
+				<a href="../home/index.html">Home</a>
+				<a href="../about/index.html">About</a>
+				<a href="../speak/index.html">Speaking</a>
+				<a href="../events/index.html">Events</a>
+				<a href="../work/index.html">Work</a>
+				<a href="../contact/index.html">Contact</a>
+				<a class="book-btn" href="../book/index.html">Book Tiffany</a>
+			</nav>
+		</div>
+	</header>
+
+	<main class="forms-main">
+		<section class="forms-hero" aria-label="Collaboration request hero">
+			<div class="container forms-hero__inner">
+				<h1 class="forms-hero__title">Collaboration Request</h1>
+			</div>
+		</section>
+
+		<section class="forms-section" aria-label="Collaboration request form">
+			<div class="container">
+				<form class="form-shell" id="collaboration-form" novalidate>
+					<h2 class="form-shell__title">Collaboration / Partnership Request</h2>
+
+					<div class="form-grid">
+						<div class="field">
+							<label for="firstName">Point of Contact First Name <span aria-hidden="true">*</span></label>
+							<input id="firstName" name="firstName" type="text" placeholder="First Name" required />
+						</div>
+						<div class="field">
+							<label for="lastName">Point of Contact Last Name <span aria-hidden="true">*</span></label>
+							<input id="lastName" name="lastName" type="text" placeholder="Last Name" required />
+						</div>
+					</div>
+
+					<div class="field">
+						<label for="phone">Point of Contact Phone Number <span aria-hidden="true">*</span></label>
+						<input id="phone" name="phone" type="tel" placeholder="Phone Number" required />
+					</div>
+
+					<div class="field">
+						<label for="email">Point of Contact Email Address <span aria-hidden="true">*</span></label>
+						<input id="email" name="email" type="email" placeholder="Email" required />
+					</div>
+
+					<div class="field">
+						<label for="company">Company or Organization Name <span aria-hidden="true">*</span></label>
+						<input id="company" name="company" type="text" placeholder="Company or Organization" required />
+					</div>
+
+					<div class="field">
+						<label for="website">Company or Organization Website <span aria-hidden="true">*</span></label>
+						<input id="website" name="website" type="url" placeholder="https://" required />
+					</div>
+
+					<div class="field">
+						<label for="location">Location of Event or Collaboration <span aria-hidden="true">*</span></label>
+						<input id="location" name="location" type="text" placeholder="City &amp; State or Virtual" required />
+					</div>
+
+					<fieldset class="field fieldset">
+						<legend>Type of Collaboration (select all that apply) <span aria-hidden="true">*</span></legend>
+						<label class="check"><input type="checkbox" name="collabType" value="podcast" /> <span>Podcast interview</span></label>
+						<label class="check"><input type="checkbox" name="collabType" value="inPersonWorkshop" /> <span>In person workshop</span></label>
+						<label class="check"><input type="checkbox" name="collabType" value="retreat" /> <span>Retreat collaboration</span></label>
+						<label class="check"><input type="checkbox" name="collabType" value="wellnessDay" /> <span>Wellness event or wellness day</span></label>
+						<label class="check"><input type="checkbox" name="collabType" value="yoga" /> <span>Yoga or meditation event</span></label>
+						<label class="check"><input type="checkbox" name="collabType" value="speakingSegment" /> <span>Speaking segment add on</span></label>
+						<label class="check"><input type="checkbox" name="collabType" value="panel" /> <span>Holistic wellness or mental health panel</span></label>
+						<label class="check"><input type="checkbox" name="collabType" value="corporatePartnership" /> <span>Corporate wellness partnership</span></label>
+						<label class="check"><input type="checkbox" name="collabType" value="other" /> <span>Other</span></label>
+					</fieldset>
+
+					<div class="field">
+						<label for="description">Description of the Collaboration you are Proposing</label>
+						<textarea id="description" name="description" rows="6" placeholder="Describe the collaboration."></textarea>
+					</div>
+
+					<div class="field">
+						<label for="date">Estimated Date or Timeframe <span aria-hidden="true">*</span></label>
+						<input id="date" name="date" type="text" placeholder="e.g., June 2026" required />
+					</div>
+
+					<div class="field">
+						<label for="attendees">Expected Number of Participants / Attendees <span aria-hidden="true">*</span></label>
+						<input id="attendees" name="attendees" type="text" placeholder="Estimated number" required />
+					</div>
+
+					<div class="field">
+						<label for="theme">Event or Collaboration Theme <span aria-hidden="true">*</span></label>
+						<input id="theme" name="theme" type="text" placeholder="wellness, mental health, intentional living, detoxing, alignment, etc." required />
+					</div>
+
+					<fieldset class="field fieldset">
+						<legend>What Would You Like Tiffany to Contribute? <span aria-hidden="true">*</span></legend>
+						<label class="check"><input type="checkbox" name="contribute" value="mind" /> <span>Mind (overthinking, self-doubt, overwhelm, procrastination)</span></label>
+						<label class="check"><input type="checkbox" name="contribute" value="body" /> <span>Body (poor sleep, fatigue, exhausted, drained, burned out)</span></label>
+						<label class="check"><input type="checkbox" name="contribute" value="spirit" /> <span>Spirit (emotional heaviness or disconnection, feeling lost, lack of fulfillment)</span></label>
+						<label class="check"><input type="checkbox" name="contribute" value="unsure" /> <span>Unsure (it's okay, we will talk it out)</span></label>
+					</fieldset>
+
+					<div class="field">
+						<label for="paid">Is this a Paid Collaboration? <span aria-hidden="true">*</span></label>
+						<select id="paid" name="paid" required>
+							<option value="" selected disabled>Select</option>
+							<option value="yes">Yes</option>
+							<option value="no">No</option>
+							<option value="unsure">Open to Discussion</option>
+						</select>
+					</div>
+
+					<div class="field">
+						<label for="referral">How Did You Hear About Tiffany? <span aria-hidden="true">*</span></label>
+						<select id="referral" name="referral" required>
+							<option value="" selected disabled>Select</option>
+							<option value="google">Google</option>
+							<option value="instagram">Instagram</option>
+							<option value="linkedin">LinkedIn</option>
+							<option value="referral">Referral</option>
+                            <option value="facebook">Facebook</option>
+                            <option value="previous-collaboration">Previous Collaboration</option>
+                            <option value="past-event">Attended Past Event</option>
+                            <option value="youtube">YouTube</option>
+							<option value="other">Other</option>
+						</select>
+					</div>
+
+					<div class="field">
+						<label for="notes">Additional Notes or Special Requests</label>
+						<textarea id="notes" name="notes" rows="6" placeholder="Any additional notes..."></textarea>
+					</div>
+
+					<button class="form-submit" type="submit">Submit</button>
+					<p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer home-footer">
+		<div class="container footer-top">
+			<div>
+				<h3>Tiffany N. Haywood</h3>
+				<p>Transformational speaker, mentor, and holistic detox expert empowering audiences to detox their lives.</p>
+			</div>
+			<div>
+				<h4>Navigate</h4>
+				<a href="../about/index.html">About</a>
+				<a href="../speak/index.html">Speaking</a>
+				<a href="../events/index.html">Events</a>
+				<a href="../work/index.html">Work</a>
+				<a href="../contact/index.html">Contact</a>
+			</div>
+			<div>
+				<h4>Speaking Inquiries</h4>
+				<p>For keynotes, panels, and corporate engagements.</p>
+				<a class="footer-link" id="link-to-speak" href="../book/index.html">Submit Speaking Inquiry &rarr;</a>
+			</div>
+		</div>
+		<div class="container footer-bottom">
+			<p>&copy; <span id="year"></span> Tiffany N. Haywood. All rights reserved.</p>
+			<div>
+				<a href="#">Privacy Policy</a>
+				<a href="#">Terms</a>
+			</div>
+		</div>
+	</footer>
+
+	<script src="../assets/js/main.js"></script>
+</body>
+</html>
