@@ -114,7 +114,6 @@ body {
    text-align: center;
    display: grid;
    justify-items: center;
-   gap: 1.4rem;
    color: var(--work-hero-ink);
 }
 
@@ -122,9 +121,9 @@ body {
    margin: 0;
    letter-spacing: 0.34em;
    text-transform: uppercase;
-   font-size: 0.72rem;
+   font-size: 0.6rem;
    font-weight: 600;
-   color: rgba(210, 138, 115, 0.9);
+   color: rgba(210, 138, 115, 0.9) !important;
 }
 
 .work-hero__title {
@@ -133,12 +132,12 @@ body {
    font-weight: 400;
    letter-spacing: -0.03em;
    line-height: 0.92;
-   font-size: clamp(3.4rem, 6.8vw, 5.5rem);
+   font-size: clamp(3.4rem, 6.8vw, 5.5rem) !important;
 }
 
 .work-hero__subtitle {
    margin: 0.9rem 0 0;
-   font-size: clamp(1.2rem, 2.2vw, 1.1rem);
+   font-size: clamp(1.2rem, 2.2vw, 1.1rem) !important;
    line-height: 1.55;
    color: rgba(31, 35, 44, 0.527);
    max-width: 40rem;
@@ -149,7 +148,7 @@ body {
    font-size: 1.02rem;
    line-height: 1.7;
    color: rgba(31, 35, 44, 0.56);
-   max-width: 36rem;
+   max-width: 40rem;
 }
 
 .work-hero__cta {
