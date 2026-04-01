@@ -6,6 +6,8 @@
   --primary: #0f766e;
   --primary-strong: #115e59;
   --border: #dbe4ee;
+  /* Used by the mobile drawer/overlay so they always sit directly below the sticky header. */
+  --header-offset: 78px;
 }
 
 * {
@@ -194,14 +196,12 @@ textarea {
 }
 
 @media (max-width: 760px) {
+  /* Keep header items in one horizontal row; navigation is handled via the drawer. */
   .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.7rem;
-  }
-
-  .site-nav {
-    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
   }
 }
 
@@ -304,7 +304,7 @@ textarea {
   right: 0;
   bottom: 0;
   /* sit below the sticky header */
-  top: 78px;
+  top: var(--header-offset);
   background: rgba(0,0,0,0.35);
   z-index: 15;
 }
@@ -312,9 +312,9 @@ textarea {
 .mobile-drawer {
   position: fixed;
   /* sit below the sticky header */
-  top: 78px;
+  top: var(--header-offset);
   right: 0;
-  height: 100vh;
+  height: calc(100vh - var(--header-offset));
   width: 292px;
   max-width: 80vw;
   background: #f8f6f3;
@@ -1129,15 +1129,8 @@ body.drawer-open {
   .home-nav { display: none; }
 
   /* header can be shorter on tablet/mobile; keep drawer below it */
-  .drawer-overlay { top: 72px; }
-  .mobile-drawer { top: 72px; height: calc(100vh - 72px); }
+  :root { --header-offset: 72px; }
 
-
-@media (max-width: 760px) {
-  /* header is not sticky on small screens in this design */
-  .drawer-overlay { top: 0; }
-  .mobile-drawer { top: 0; height: 100vh; }
-}
   .home-nav {
     gap: 1rem;
   }
@@ -1171,6 +1164,11 @@ body.drawer-open {
   .mini-metrics div:last-child {
     border-bottom: 0;
   }
+}
+
+@media (max-width: 760px) {
+  /* Keep drawer/overlay below the header on small screens too. */
+  :root { --header-offset: 72px; }
 }
 
 @media (max-width: 760px) {

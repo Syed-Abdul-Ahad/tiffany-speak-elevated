@@ -19,6 +19,19 @@
     yearTarget.textContent = String(new Date().getFullYear());
   }
 
+  // Keep the mobile drawer/overlay positioned exactly below the sticky header.
+  // This avoids small overlaps/gaps when header height changes between breakpoints.
+  function updateHeaderOffsetVar() {
+    var header = document.querySelector(".site-header");
+    if (!header) return;
+    var h = header.getBoundingClientRect().height;
+    if (!h || h < 40) return;
+    document.documentElement.style.setProperty("--header-offset", Math.round(h) + "px");
+  }
+
+  updateHeaderOffsetVar();
+  window.addEventListener("resize", updateHeaderOffsetVar);
+
   var contactForm = document.getElementById("contact-form");
   if (contactForm) {
     contactForm.addEventListener("submit", function (event) {
