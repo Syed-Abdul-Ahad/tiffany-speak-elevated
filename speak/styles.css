@@ -3,9 +3,7 @@
   background: #f3f1ee;
 }
 
-.speak-page .container {
-  width: min(1120px, 92%);
-}
+/* Use shared container sizing from ../home/styles.css so header gutters match site-wide */
 
 .speak-page .home-nav a[href="../speak/index.html"] {
   color: #d49a84;

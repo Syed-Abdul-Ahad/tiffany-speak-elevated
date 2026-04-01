@@ -54,11 +54,6 @@
 	line-height: 1.6;
 }
 
-/* More accurate left offset (inspiration has wider left gutter than other pages) */
-.book-page .container {
-	width: min(1240px, 92%);
-}
-
 .book-hero__inner {
 	padding-left: clamp(0px, 2.4vw, 34px);
 }

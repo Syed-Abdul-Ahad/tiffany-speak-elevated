@@ -19,6 +19,10 @@
 			<a class="brand-mark" href="../home/index.html" aria-label="Tiffany Haywood home">
 				<span><img src="../assets/pictures/logo.png" alt="Tiffany N. Haywood" width="60" height="60" /></span>
 			</a>
+			<button id="nav-toggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+				<span class="hamburger" aria-hidden="true"></span>
+				<span class="hamburger-close" aria-hidden="true">✕</span>
+			</button>
 			<nav class="site-nav home-nav" aria-label="Main navigation">
 				<a href="../home/index.html">Home</a>
 				<a href="../about/index.html">About</a>
@@ -30,6 +34,19 @@
 			</nav>
 		</div>
 	</header>
+
+	<div id="drawer-overlay" class="drawer-overlay" hidden></div>
+	<aside id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+		<nav class="mobile-nav" aria-label="Mobile navigation">
+			<a href="../home/index.html">Home</a>
+			<a href="../about/index.html">About</a>
+			<a href="../speak/index.html">Speaking</a>
+			<a href="../events/index.html">Events</a>
+			<a href="../work/index.html">Work</a>
+			<a href="../contact/index.html">Contact</a>
+			<a class="book-btn" href="../book/index.html">Book Tiffany</a>
+		</nav>
+	</aside>
 
 	<main class="book-main">
 		<section class="book-hero" aria-label="Speaking inquiry hero">

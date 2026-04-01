@@ -219,7 +219,8 @@ textarea {
 }
 
 .home-page .container {
-  width: min(1120px, 92%);
+  /* Match the Book page's tighter header gutters site-wide */
+  width: min(1240px, 92%);
 }
 
 .home-page .site-header {
@@ -236,10 +237,143 @@ textarea {
   gap: 1.5rem;
 }
 
+/* Mobile nav toggle (hamburger) */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-toggle .hamburger {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #4a413e;
+  position: relative;
+}
+
+.nav-toggle .hamburger-close {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: #4a413e;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* swap icons in-place */
+.nav-toggle[aria-expanded="true"] .hamburger {
+  opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] .hamburger-close {
+  opacity: 1;
+}
+
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 2px;
+  background: inherit;
+}
+
+.nav-toggle .hamburger::before { top: -7px; }
+.nav-toggle .hamburger::after { top: 7px; }
+
+/* Drawer / overlay */
+.drawer-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* sit below the sticky header */
+  top: 78px;
+  background: rgba(0,0,0,0.35);
+  z-index: 15;
+}
+
+.mobile-drawer {
+  position: fixed;
+  /* sit below the sticky header */
+  top: 78px;
+  right: 0;
+  height: 100vh;
+  width: 292px;
+  max-width: 80vw;
+  background: #f8f6f3;
+  box-shadow: 2px 0 24px rgba(0,0,0,0.08);
+  transform: translateX(110%);
+  transition: transform 260ms cubic-bezier(.2,.9,.2,1);
+  z-index: 16;
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: auto;
+}
+
+.mobile-drawer[aria-hidden="false"] {
+  transform: translateX(0);
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 0.8rem;
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  color: #6f7476;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.55rem 0.25rem;
+}
+
+.mobile-nav a.active,
+.mobile-nav a:hover {
+  color: #3d3430;
+}
+
+.mobile-nav .book-btn {
+  margin-top: 0.6rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--home-accent-strong);
+  color: #fff;
+  background: var(--home-accent-strong);
+  border-radius: 2px;
+  text-align: center;
+}
+
+.mobile-nav .book-btn:hover,
+.mobile-nav .book-btn.active {
+  color: var(--home-accent-strong);
+  background: transparent;
+}
+
+/* When drawer is open, prevent body scroll */
+body.drawer-open {
+  overflow: hidden;
+}
+
 .brand-mark {
   width: 60px;
   height: 60px;
-  border: 1px solid #ede6df;
+  border: 0;
   border-radius: 2px;
   display: grid;
   place-items: center;
@@ -247,6 +381,14 @@ textarea {
   text-decoration: none;
   letter-spacing: 0.18em;
   font-size: 0.8rem;
+}
+
+/* Ensure logo image is consistent across pages (some HTML uses 100x60, some 60x60) */
+.brand-mark img {
+  display: block;
+  width: 100px;
+  height: 60px;
+  object-fit: contain;
 }
 
 .home-nav {
@@ -976,6 +1118,21 @@ textarea {
     padding: 0.7rem 0;
   }
 
+  .nav-toggle { display: inline-flex; }
+
+  /* hide desktop nav on smaller viewports so drawer is used */
+  .home-nav { display: none; }
+
+  /* header can be shorter on tablet/mobile; keep drawer below it */
+  .drawer-overlay { top: 72px; }
+  .mobile-drawer { top: 72px; height: calc(100vh - 72px); }
+
+
+@media (max-width: 760px) {
+  /* header is not sticky on small screens in this design */
+  .drawer-overlay { top: 0; }
+  .mobile-drawer { top: 0; height: 100vh; }
+}
   .home-nav {
     gap: 1rem;
   }
