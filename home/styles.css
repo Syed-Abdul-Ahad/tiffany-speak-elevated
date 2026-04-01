@@ -22,6 +22,11 @@ body {
   min-height: 100vh;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 .container {
   width: min(1000px, 92%);
   margin: 0 auto;
